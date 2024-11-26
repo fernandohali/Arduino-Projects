@@ -1,4 +1,4 @@
-# Aruino-Projects
+# Arduino-Projects
 
 Este repositório contém links para diferentes projetos desenvolvidos no Tinkercad, envolvendo o uso de LEDs, sensores e displays LCD.
 
@@ -31,6 +31,14 @@ Este repositório contém links para diferentes projetos desenvolvidos no Tinker
 7. **Sensor Ultrassônico com Micro Servo**
    - Descrição: Integração de um sensor ultrassônico com um servo motor para aplicações de medição com movimento.
    - Link: [Projeto 7 - Sensor Ultrassônico com Micro Servo](https://www.tinkercad.com/things/kjl9qxU4Jk7-7-sensor-ultrassonico-micro-servo)
+
+8. **Envio de Dados com LoRa - Projeto 8**
+   - Descrição: Transmissão de dados via LoRa utilizando o módulo SX1280, simulando o envio de pacotes de dados como se fosse um rastreador GPS.
+   - Link: [Projeto 8 - Envio de Dados com LoRa]()
+
+9. **Recepção de Dados com LoRa - Projeto 9**
+   - Descrição: Recepção e exibição de dados transmitidos por LoRa, correspondendo ao projeto de envio de dados utilizando o SX1280.
+   - Link: [Projeto 9 - Recepção de Dados com LoRa]().
 
 ---
 

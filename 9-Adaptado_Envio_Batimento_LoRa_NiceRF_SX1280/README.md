@@ -1,34 +1,44 @@
-# Envio de Dados via LoRa com Módulo SX1280
+# Envio de Dados de Eletrocardiograma (ECG) via LoRa com Módulo SX1280
 
-Este projeto demonstra como enviar um conjunto de dados inteiros usando o módulo SX1280 LoRa. O programa converte os números inteiros em uma string e os envia como pacotes usando o protocolo LoRa. Um LED é usado para indicar o status da transmissão e o monitor serial exibe detalhes sobre o envio dos pacotes.
+Este projeto demonstra como enviar dados de batimentos cardíacos (ECG) usando o módulo LoRa SX1280, utilizando o Arduino. Os dados de ECG são coletados de um arquivo TXT (ou XLSX), convertidos e enviados via LoRa para outro dispositivo receptor.
 
 ## Materiais Necessários
 
-- Arduino Uno ou compatível
-- Módulo SX1280 LoRa
-- LEDs e resistores para indicações visuais
-- Fios de conexão
+- **Arduino Uno** ou compatível
+- **Módulo SX1280 LoRa**
+- **LED** e resistores para indicar o status de transmissão
+- **Fios de conexão**
 
 ## Diagrama de Conexão
 
 1. **Módulo LoRa SX1280**:
-
-   - Conecte os pinos SPI do módulo LoRa ao Arduino conforme as configurações definidas no código.
-
-2. **LEDs**:
+   - Conecte os pinos SPI do módulo LoRa ao Arduino conforme as configurações no código.
+2. **LED**:
    - Conecte um LED ao pino `LED1` para indicar o status da transmissão.
 
 ## Funcionamento
 
-O código envia um conjunto de números inteiros como pacotes LoRa. A cada pacote transmitido, o monitor serial exibe o número do pacote, a string de dados e o tempo de envio. O LED1 acende enquanto o pacote está sendo transmitido.
+O código realiza as seguintes etapas:
+1. Coleta os dados do ECG a partir de um arquivo de texto (ou um array de inteiros).
+2. Converte os valores para uma string de caracteres.
+3. Envia os dados em pacotes via LoRa utilizando o módulo SX1280.
+4. Exibe o status da transmissão no monitor serial e acende um LED durante a transmissão.
+5. O receptor coleta os pacotes LoRa e exibe os dados recebidos no monitor serial.
 
-## Como Usar
+### Etapas de Implementação:
 
-1. Faça o upload do código para o seu Arduino.
-2. Conecte o módulo LoRa e o LED conforme o diagrama de conexão.
-3. Abra o monitor serial para visualizar as informações sobre o envio dos pacotes.
-4. O LED1 indicará o status da transmissão.
+1. **Seleção de Dados**:
+   Os dados de ECG são extraídos e convertidos para um formato adequado. Cada conjunto de dados representa um batimento cardíaco.
 
-## Licença
+2. **Conversão de Dados**:
+   A conversão dos dados de inteiros para caracteres é realizada para que possam ser transmitidos como pacotes LoRa.
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+3. **Transmissão de Dados**:
+   Os dados são transmitidos em pacotes via LoRa. O LED indica quando os pacotes estão sendo enviados.
+
+4. **Recepção de Dados**:
+   O dispositivo receptor coleta os pacotes e exibe os dados no monitor serial.
+
+5. **Visualização Gráfica**:
+   Após a recepção dos dados, um gráfico pode ser gerado em uma ferramenta como o Excel para visualizar os batimentos cardíacos.
+

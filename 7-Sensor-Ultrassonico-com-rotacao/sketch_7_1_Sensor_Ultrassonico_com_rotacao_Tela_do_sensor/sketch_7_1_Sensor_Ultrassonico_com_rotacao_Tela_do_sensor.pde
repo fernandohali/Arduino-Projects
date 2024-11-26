@@ -17,7 +17,7 @@ PFont orcFont;
 void setup() {
   size(1200, 700); // Define o tamanho da tela (resolução)
   smooth(); // Ativa o suavizado
-  myPort = new Serial(this, "COM6", 9600); // Inicia a comunicação serial
+  myPort = new Serial(this, "COM4", 9600); // Inicia a comunicação serial
   myPort.bufferUntil('.'); // Define para ler dados até o caractere '.'
 }
 

@@ -51,7 +51,7 @@ void loop() {
         digitalWrite(buzzpin, buzzState);
         digitalWrite(LED_RED1, buzzState);
         digitalWrite(LED_GREEN, HIGH);
-        digitalWrite(LED_RED2, LOW); // Apaga o LED vermelho 2 se não está na faixa mais próxima
+        digitalWrite(LED_RED2, LOW);  // Apaga o LED vermelho 2 se não está na faixa mais próxima
       }
     } else if (distance <= 20 && distance > 0) {
       unsigned long currentMillis = millis();
@@ -60,14 +60,14 @@ void loop() {
         buzzState = !buzzState;  // Alterna o estado do buzzer e LED vermelho
         digitalWrite(buzzpin, buzzState);
         digitalWrite(LED_RED1, buzzState);
-        digitalWrite(LED_RED2, buzzState); // Acende o LED vermelho 2 para distância < 20 cm
+        digitalWrite(LED_RED2, buzzState);  // Acende o LED vermelho 2 para distância < 20 cm
         digitalWrite(LED_GREEN, HIGH);
       }
     } else if (distance > 40) {
       digitalWrite(buzzpin, LOW);
       digitalWrite(LED_GREEN, LOW);
       digitalWrite(LED_RED1, HIGH);
-      digitalWrite(LED_RED2, LOW); // Apaga o LED vermelho 2 se não está na faixa de < 20 cm
+      digitalWrite(LED_RED2, LOW);  // Apaga o LED vermelho 2 se não está na faixa de < 20 cm
     }
 
     Serial.print(i);
@@ -91,7 +91,7 @@ void loop() {
         digitalWrite(buzzpin, buzzState);
         digitalWrite(LED_RED1, buzzState);
         digitalWrite(LED_GREEN, HIGH);
-        digitalWrite(LED_RED2, LOW); // Apaga o LED vermelho 2 se não está na faixa mais próxima
+        digitalWrite(LED_RED2, LOW);  // Apaga o LED vermelho 2 se não está na faixa mais próxima
       }
     } else if (distance <= 20 && distance > 0) {
       unsigned long currentMillis = millis();
@@ -100,14 +100,14 @@ void loop() {
         buzzState = !buzzState;
         digitalWrite(buzzpin, buzzState);
         digitalWrite(LED_RED1, buzzState);
-        digitalWrite(LED_RED2, buzzState); // Acende o LED vermelho 2 para distância < 20 cm
+        digitalWrite(LED_RED2, buzzState);  // Acende o LED vermelho 2 para distância < 20 cm
         digitalWrite(LED_GREEN, HIGH);
       }
     } else if (distance > 40) {
       digitalWrite(buzzpin, LOW);
       digitalWrite(LED_GREEN, LOW);
       digitalWrite(LED_RED1, HIGH);
-      digitalWrite(LED_RED2, LOW); // Apaga o LED vermelho 2 se não está na faixa de < 20 cm
+      digitalWrite(LED_RED2, LOW);  // Apaga o LED vermelho 2 se não está na faixa de < 20 cm
     }
 
     Serial.print(i);
